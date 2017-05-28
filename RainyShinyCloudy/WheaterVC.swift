@@ -20,6 +20,8 @@ class WheaterVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         super.viewDidLoad()
         tableView.delegate = self
         tableView.dataSource = self
+        
+        print(createLatAndLonURL(lat: 10, lon: 20))
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
