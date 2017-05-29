@@ -15,13 +15,17 @@ class WheaterVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     @IBOutlet weak var currentWeatherImage: UIImageView!
     @IBOutlet weak var currentWeatherTypeLabel: UILabel!
     @IBOutlet weak var tableView: UITableView!
-
+    
+    var currentWeather = CurrentWeather()
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.delegate = self
         tableView.dataSource = self
         
         print(createLatAndLonURL(lat: 10, lon: 20))
+        currentWeather.downloadWeatherDetails {
+            // Make the UI show the date
+        }
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {

@@ -14,6 +14,8 @@ let LONGITUDE = "&lon="
 let API_ID = "&appid="
 let API_KEY = "f0efe5ebd38aaf79ad2c730a773811d5"
 
+typealias DownloadComplete = () -> ()
+
 func createLatAndLonURL(lat: Int, lon: Int) -> String {
     return "\(BASE_URL)\(LATITUDE)\(lat)\(LONGITUDE)\(lon)\(API_ID)\(API_KEY)"
 }
